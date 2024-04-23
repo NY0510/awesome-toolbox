@@ -27,21 +27,24 @@ export default function Header() {
 						<input className={"h-full bg-transparent outline-none"} type="text" placeholder="검색" onFocus={() => setSearchFocused(true)} onBlur={() => setSearchFocused(false)} />
 					</div>
 				</div>
-				<button
-					type="button"
-					className="w-10 inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:border-white/20 hover:text-white focus:outline-none"
-					onClick={() => setHamburgerOpen(!hamburgerOpen)}>
-					{hamburgerOpen ? <FontAwesomeIcon icon={faX} /> : <FontAwesomeIcon icon={faBars} />}
-				</button>
 
-				<ul className="hidden gap-6 items-center md:flex">
-					<li className="cursor-pointer hover:text-primary transition">
-						<FontAwesomeIcon icon={faToolbox} /> Tools
-					</li>
-					<li className="cursor-pointer hover:text-primary transition">
-						<FontAwesomeIcon icon={faFileCode} /> Snippets
-					</li>
-				</ul>
+				<div className="flex gap-6">
+					<button
+						type="button"
+						className="w-10 inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:border-white/20 hover:text-white focus:outline-none"
+						onClick={() => setHamburgerOpen(!hamburgerOpen)}>
+						{hamburgerOpen ? <FontAwesomeIcon icon={faX} /> : <FontAwesomeIcon icon={faBars} />}
+					</button>
+
+					<ul className="hidden gap-6 items-center md:flex">
+						<li className="cursor-pointer hover:text-primary transition">
+							<FontAwesomeIcon icon={faToolbox} /> Tools
+						</li>
+						<li className="cursor-pointer hover:text-primary transition">
+							<FontAwesomeIcon icon={faFileCode} /> Snippets
+						</li>
+					</ul>
+				</div>
 			</nav>
 
 			{/* <div className="space-y-1 px-2 pb-3 pt-2">
